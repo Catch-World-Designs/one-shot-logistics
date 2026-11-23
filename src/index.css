@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Sora", ui-sans-system, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-system, system-ui, sans-serif;
+  --color-brand: #E11D2E;
+  --color-brand-dark: #B90F1E;
+  --color-brand-deep: #8F0B18;
+  --color-brand-light: #FFF1F2;
+  --color-ink: #121218;
+  --color-ink-2: #1B1B22;
+  --color-ink-3: #26262F;
+  --color-steel: #5B5B66;
+  --color-mist: #F5F6F8;
+  --color-line: #E8E9ED;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-sans); background: #fff; color: #121218; -webkit-font-smoothing: antialiased; }
+::selection { background: #E11D2E; color: #fff; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* faint grid for hero */
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 30%, black 30%, transparent 75%);
+}
+.dot-grid {
+  background-image: radial-gradient(rgba(18,18,24,.10) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.map-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+.phone-map-grid {
+  background-image:
+    linear-gradient(rgba(18,18,24,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18,18,24,.07) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: .7; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+.pulse-ring { animation: pulse-ring 2s cubic-bezier(0,0,.2,1) infinite; }
+@keyframes dashmove { to { stroke-dashoffset: -24; } }
+.route-dash { stroke-dasharray: 5 7; animation: dashmove 1.2s linear infinite; }
+@keyframes floaty {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes marquee-dot { 0% { offset-distance: 0%; } 100% { offset-distance: 100%; } }
+
+input, select, textarea { outline: none; }
+input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible, a:focus-visible {
+  outline: 2px solid #E11D2E; outline-offset: 2px;
+}
