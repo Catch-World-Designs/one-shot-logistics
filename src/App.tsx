@@ -11,9 +11,6 @@ import {
 function FacebookIcon({ className = "h-4 w-4" }: { className?: string }) {
   return <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true"><path d="M13.5 21v-7.2h2.42l.36-2.8H13.5V9.2c0-.81.23-1.36 1.4-1.36h1.5V5.35c-.26-.03-1.15-.11-2.19-.11-2.17 0-3.65 1.32-3.65 3.75V11H8.13v2.8h2.43V21h2.94Z"/></svg>;
 }
-function InstagramIcon({ className = "h-4 w-4" }: { className?: string }) {
-  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" className={className} aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/></svg>;
-}
 
 /* Logo mark — recreated from the One Shot pin / target / arrow */
 export function LogoMark({ size = 44 }: { size?: number }) {
@@ -481,7 +478,7 @@ function Tracking() {
                   <motion.div key="nf" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="flex min-h-[430px] flex-col items-center justify-center rounded-[1.8rem] bg-[#FFF8F8] px-8 text-center ring-1 ring-[#E11D2E]/15">
                     <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-[#E11D2E] shadow-sm ring-1 ring-[#E11D2E]/10"><Search className="h-6 w-6" /></span>
                     <h3 className="mt-4 font-display text-[18px] font-bold text-[#121218]">We couldn&apos;t find “{searched}”</h3>
-                    <p className="mt-2 max-w-sm text-[13.5px] leading-relaxed text-[#5B5B66]">Double-check the ID on your bill of lading — it looks like <strong className="text-[#121218]">OSL-4530</strong>. Or call dispatch at <a className="font-semibold text-[#E11D2E]" href="tel:+18005550147">(800) 555-0147</a> and we&apos;ll locate it for you.</p>
+                    <p className="mt-2 max-w-sm text-[13.5px] leading-relaxed text-[#5B5B66]">Double-check the ID on your bill of lading — it looks like <strong className="text-[#121218]">OSL-4530</strong>. Or call dispatch at <a className="font-semibold text-[#E11D2E]" href="tel:+18005371535">(800) 537-1535</a> and we&apos;ll locate it for you.</p>
                     <button onClick={() => { setQuery("OSL-4530"); setState("idle"); }} className="mt-5 rounded-full bg-[#121218] px-5 py-2.5 text-[13px] font-bold text-white hover:bg-[#E11D2E]">Try OSL-4530</button>
                   </motion.div>
                 )}
@@ -830,8 +827,8 @@ function Contact() {
               <div className="rounded-[1.8rem] bg-[#121218] p-7 text-white">
                 <h3 className="font-display text-[17px] font-bold">Talk to dispatch</h3>
                 <ul className="mt-5 space-y-4 text-[14px]">
-                  <li className="flex gap-3"><span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#E11D2E]"><Phone className="h-4.5 w-4.5" /></span><span><span className="block text-[11px] tracking-wider text-white/45 uppercase">24/7 Dispatch line</span><a href="tel:+18005550147" className="font-display font-bold hover:text-[#FF8A93]">(800) 555-0147</a></span></li>
-                  <li className="flex gap-3"><span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/[0.08] ring-1 ring-white/10"><Mail className="h-4.5 w-4.5" /></span><span><span className="block text-[11px] tracking-wider text-white/45 uppercase">Email</span><a href="mailto:dispatch@oneshotlogistics.com" className="font-semibold hover:text-[#FF8A93]">dispatch@oneshotlogistics.com</a></span></li>
+                  <li className="flex gap-3"><span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#E11D2E]"><Phone className="h-4.5 w-4.5" /></span><span><span className="block text-[11px] tracking-wider text-white/45 uppercase">24/7 Dispatch line</span><a href="tel:+18005371535" className="font-display font-bold hover:text-[#FF8A93]">(800) 537-1535</a></span></li>
+                  <li className="flex gap-3"><span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/[0.08] ring-1 ring-white/10"><Mail className="h-4.5 w-4.5" /></span><span><span className="block text-[11px] tracking-wider text-white/45 uppercase">Email</span><a href="mailto:info@oneshotlogistics.com" className="font-semibold hover:text-[#FF8A93]">info@oneshotlogistics.com</a></span></li>
                   <li className="flex gap-3"><span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/[0.08] ring-1 ring-white/10"><Clock className="h-4.5 w-4.5" /></span><span><span className="block text-[11px] tracking-wider text-white/45 uppercase">Dispatch hours</span><span className="font-semibold">24 hours · 7 days · 365 days</span></span></li>
                   <li className="flex gap-3"><span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/[0.08] ring-1 ring-white/10"><Globe2 className="h-4.5 w-4.5" /></span><span><span className="block text-[11px] tracking-wider text-white/45 uppercase">Service area</span><span className="font-semibold">All 48 contiguous U.S. states</span><span className="block text-[12px] text-white/50">HQ: Dallas, TX · Terminals in Atlanta &amp; Chicago</span></span></li>
                 </ul>
@@ -840,8 +837,7 @@ function Contact() {
                 <h3 className="font-display text-[15px] font-bold text-[#121218]">Follow the freight</h3>
                 <p className="mt-1.5 text-[13px] text-[#5B5B66]">Daily lanes, driver stories and network updates.</p>
                 <div className="mt-4 flex flex-wrap gap-2.5">
-                  <a href="https://facebook.com/OneShotLogistics" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-[#121218] px-4 py-2.5 text-[12.5px] font-bold text-white transition hover:bg-[#E11D2E]"><FacebookIcon className="h-4 w-4" /> @OneShotLogistics</a>
-                  <a href="https://instagram.com/oneshotlogistics" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-[#F5F6F8] px-4 py-2.5 text-[12.5px] font-bold text-[#121218] ring-1 ring-black/[0.06] transition hover:text-[#E11D2E]"><InstagramIcon className="h-4 w-4" /> @oneshotlogistics</a>
+                  <a href="https://www.facebook.com/OneShotLogistics" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-[#121218] px-4 py-2.5 text-[12.5px] font-bold text-white transition hover:bg-[#E11D2E]"><FacebookIcon className="h-4 w-4" /> @OneShotLogistics</a>
                 </div>
                 <div className="mt-5 border-t border-[#ECEEF1] pt-5"><StoreBadges dark={false} /></div>
               </div>
@@ -864,8 +860,7 @@ function Footer() {
             <p className="mt-5 max-w-xs font-display text-[16px] font-bold leading-snug">One shot. Every load. <span className="text-[#FF5A66]">Delivered.</span></p>
             <p className="mt-2 max-w-xs text-[13px] leading-relaxed text-white/50">Reliable U.S. freight with real-time visibility, professional drivers and dispatch that never sleeps.</p>
             <div className="mt-5 flex gap-2">
-              <a href="https://facebook.com/OneShotLogistics" target="_blank" rel="noreferrer" aria-label="One Shot Logistics on Facebook" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.07] ring-1 ring-white/10 transition hover:bg-[#E11D2E]"><FacebookIcon className="h-4 w-4" /></a>
-              <a href="https://instagram.com/oneshotlogistics" target="_blank" rel="noreferrer" aria-label="One Shot Logistics on Instagram" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.07] ring-1 ring-white/10 transition hover:bg-[#E11D2E]"><InstagramIcon className="h-4 w-4" /></a>
+              <a href="https://www.facebook.com/OneShotLogistics" target="_blank" rel="noreferrer" aria-label="One Shot Logistics on Facebook" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.07] ring-1 ring-white/10 transition hover:bg-[#E11D2E]"><FacebookIcon className="h-4 w-4" /></a>
             </div>
           </div>
           <nav aria-label="Footer">
@@ -879,8 +874,8 @@ function Footer() {
           <div>
             <h3 className="text-[11px] font-bold tracking-[0.22em] text-white/40 uppercase">Contact &amp; App</h3>
             <ul className="mt-4 space-y-2.5 text-[14px] text-white/65">
-              <li><a href="tel:+18005550147" className="hover:text-white">(800) 555-0147 · 24/7</a></li>
-              <li><a href="mailto:dispatch@oneshotlogistics.com" className="hover:text-white">dispatch@oneshotlogistics.com</a></li>
+              <li><a href="tel:+18005371535" className="hover:text-white">(800) 537-1535 · 24/7</a></li>
+              <li><a href="mailto:info@oneshotlogistics.com" className="hover:text-white">info@oneshotlogistics.com</a></li>
               <li>Dallas, TX · Atlanta, GA · Chicago, IL</li>
             </ul>
             <div className="mt-5"><StoreBadges dark /></div>
